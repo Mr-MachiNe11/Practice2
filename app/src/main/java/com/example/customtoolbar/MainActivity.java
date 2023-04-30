@@ -25,10 +25,8 @@ public class MainActivity extends AppCompatActivity {
         //step1
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        toolbar.setTitle("My ToolBar");
+        getSupportActionBar().setTitle("My Toolbar");
         toolbar.setSubtitle("Sub Title");
-
-
 
 
     }
