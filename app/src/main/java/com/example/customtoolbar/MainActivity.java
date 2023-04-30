@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -40,6 +41,17 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int itemId = item.getItemId();
+
+        if(itemId==R.id.opt_new){
+            Toast.makeText(this, "Created New File.", Toast.LENGTH_SHORT).show();
+        } else if (itemId==R.id.opt_open) {
+            Toast.makeText(this, "File Opened.", Toast.LENGTH_SHORT).show();
+        } else if (itemId==R.id.opt_save) {
+            Toast.makeText(this, "File Saved.", Toast.LENGTH_SHORT).show();
+        } else {
+            super.onBackPressed();
+        }
 
         return super.onOptionsItemSelected(item);
     }
