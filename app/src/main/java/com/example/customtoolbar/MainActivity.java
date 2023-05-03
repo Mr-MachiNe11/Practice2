@@ -17,7 +17,6 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     Toolbar toolbar;
-    Button btnNext;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -26,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         toolbar = findViewById(R.id.toolbar);
-        btnNext = findViewById(R.id.btnNext);
 
         //step1
         setSupportActionBar(toolbar);
@@ -34,12 +32,6 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("My Toolbar");
         toolbar.setSubtitle("Sub Title");
 
-        btnNext.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-            }
-        });
 
 
     }
@@ -66,4 +58,8 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
+
+
 }
